@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Valentine ZIP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LANDING SCREEN -->
+<div class="screen active" id="landingScreen">
+  <div class="slideshow">
+    <div class="slide"></div><div class="slide"></div><div class="slide"></div><div class="slide"></div>
+    <div class="slide"></div><div class="slide"></div><div class="slide"></div><div class="slide"></div>
+  </div>
+
+  <div class="landing">
+    <div class="card">
+      <h1>Will you be my Valentine? 💖</h1>
+      <div class="actions">
+        <button class="btn yes" id="yesBtn">YES</button>
+        <button class="btn no">NO</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GAME SCREEN -->
+<div class="screen hidden" id="puzzleScreen">
+  <div class="puzzle-container">
+    <p class="instruction">Follow the numbers in order</p>
+    <div class="grid-container" id="gridContainer"></div>
+
+    <div class="controls">
+      <button id="undoBtn">Undo</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+  </div>
+</div>
+
+<!-- FINAL SCREEN -->
+<div class="screen hidden" id="finalScreen">
+  <div class="slideshow">
+    <div class="slide"></div><div class="slide"></div><div class="slide"></div><div class="slide"></div>
+    <div class="slide"></div><div class="slide"></div><div class="slide"></div><div class="slide"></div>
+  </div>
+
+  <div class="thankyou">
+    <div class="message">
+      Some paths are worth following hehe💗<br>
+      Thanks for being my Valentine:)
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
