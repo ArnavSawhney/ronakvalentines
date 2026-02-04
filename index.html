@@ -20,7 +20,7 @@
       <h1>Will you be my Valentine? 💖</h1>
       <div class="actions">
         <button class="btn yes" id="yesBtn">YES</button>
-        <button class="btn no">NO</button>
+        <button class="btn no" id="noBtn">NO</button>
       </div>
     </div>
   </div>
@@ -29,31 +29,25 @@
 <!-- NO MEME SCREEN -->
 <div class="screen hidden" id="noScreen">
   <div class="no-page">
-
-    <!-- TENOR EMBED -->
     <div class="meme-wrapper">
       <div class="tenor-gif-embed"
-           data-postid="5738433152134010665"
-           data-share-method="host"
-           data-aspect-ratio="0.763052"
-           data-width="100%">
+        data-postid="5738433152134010665"
+        data-share-method="host"
+        data-aspect-ratio="0.763052"
+        data-width="100%">
       </div>
     </div>
-
-    <button class="btn back" id="backBtn">Okay okay, go back</button>
+    <button class="btn back" id="backBtn">Okay okay, go back 💗</button>
   </div>
 </div>
 
-<!-- TENOR SCRIPT (LOAD ONCE, AT END OF BODY) -->
 <script async src="https://tenor.com/embed.js"></script>
-
 
 <!-- GAME SCREEN -->
 <div class="screen hidden" id="puzzleScreen">
   <div class="puzzle-container">
     <p class="instruction">Follow the numbers in order</p>
     <div class="grid-container" id="gridContainer"></div>
-
     <div class="controls">
       <button id="undoBtn">Undo</button>
       <button id="resetBtn">Reset</button>
@@ -68,7 +62,6 @@
     <div class="slide"></div><div class="slide"></div><div class="slide"></div><div class="slide"></div>
   </div>
 
-  <!-- floating hearts -->
   <div class="hearts"></div>
 
   <div class="thankyou">
@@ -76,14 +69,12 @@
       <p class="line">You probably noticed it by the end.</p>
       <p class="line">All the turns made a heart.</p>
       <p class="line">Some things only make sense when you finish them.</p>
-      <p class="line highlight">Please be my Valentine TSKE CHHUK MYON JIGUR 💗</p>
+      <p class="line highlight">Please be my Valentine 💗</p>
     </div>
   </div>
 
-  <!-- soft chime -->
-  <audio id="chime" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_5b7b7a71c6.mp3?filename=notification-soft-143884.mp3"></audio>
+  <audio id="chime" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_5b7b7a71c6.mp3"></audio>
 </div>
-
 
 <script src="script.js"></script>
 </body>
