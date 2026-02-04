@@ -7,6 +7,10 @@ const gridContainer = document.getElementById("gridContainer");
 const undoBtn = document.getElementById("undoBtn");
 const resetBtn = document.getElementById("resetBtn");
 
+const noBtn = document.querySelector(".btn.no");
+const noScreen = document.getElementById("noScreen");
+const backBtn = document.getElementById("backBtn");
+
 yesBtn.onclick = () => {
   landingScreen.classList.remove("active");
   landingScreen.classList.add("hidden");
@@ -130,9 +134,52 @@ function finish() {
   });
 
   setTimeout(() => {
-    puzzleScreen.classList.remove("active");
-    puzzleScreen.classList.add("hidden");
-    finalScreen.classList.remove("hidden");
-    finalScreen.classList.add("active");
-  }, 1200);
+  puzzleScreen.classList.remove("active");
+  puzzleScreen.classList.add("hidden");
+
+  finalScreen.classList.remove("hidden");
+  finalScreen.classList.add("active");
+
+  startFinalEffects();
+}, 1200);
 }
+
+noBtn.onclick = () => {
+  landingScreen.classList.remove("active");
+  landingScreen.classList.add("hidden");
+
+  noScreen.classList.remove("hidden");
+  noScreen.classList.add("active");
+};
+
+backBtn.onclick = () => {
+  noScreen.classList.remove("active");
+  noScreen.classList.add("hidden");
+
+  landingScreen.classList.remove("hidden");
+  landingScreen.classList.add("active");
+};
+
+function startFinalEffects() {
+  const heartsContainer = document.querySelector(".hearts");
+  const chime = document.getElementById("chime");
+
+  // play sound once
+  if (chime) {
+    chime.volume = 0.4;
+    chime.play().catch(() => {});
+  }
+
+  // generate floating hearts
+  for (let i = 0; i < 18; i++) {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.textContent = "💗";
+    heart.style.left = Math.random() * 100 + "%";
+    heart.style.animationDuration = 6 + Math.random() * 6 + "s";
+    heart.style.animationDelay = Math.random() * 4 + "s";
+    heartsContainer.appendChild(heart);
+  }
+}
+
+

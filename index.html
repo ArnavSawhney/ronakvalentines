@@ -26,6 +26,28 @@
   </div>
 </div>
 
+<!-- NO MEME SCREEN -->
+<div class="screen hidden" id="noScreen">
+  <div class="no-page">
+
+    <!-- TENOR EMBED -->
+    <div class="meme-wrapper">
+      <div class="tenor-gif-embed"
+           data-postid="5738433152134010665"
+           data-share-method="host"
+           data-aspect-ratio="0.763052"
+           data-width="100%">
+      </div>
+    </div>
+
+    <button class="btn back" id="backBtn">Okay okay, go back</button>
+  </div>
+</div>
+
+<!-- TENOR SCRIPT (LOAD ONCE, AT END OF BODY) -->
+<script async src="https://tenor.com/embed.js"></script>
+
+
 <!-- GAME SCREEN -->
 <div class="screen hidden" id="puzzleScreen">
   <div class="puzzle-container">
@@ -46,14 +68,22 @@
     <div class="slide"></div><div class="slide"></div><div class="slide"></div><div class="slide"></div>
   </div>
 
+  <!-- floating hearts -->
+  <div class="hearts"></div>
+
   <div class="thankyou">
-    <div class="message">
-      Some paths are worth following hehe💗<br>
-      Thanks for being my Valentine:)
-      TSKE CHHUK MYON JIGUR
+    <div class="final-text">
+      <p class="line">You probably noticed it by the end.</p>
+      <p class="line">All the turns made a heart.</p>
+      <p class="line">Some things only make sense when you finish them.</p>
+      <p class="line highlight">Please be my Valentine TSKE CHHUK MYON JIGUR 💗</p>
     </div>
   </div>
+
+  <!-- soft chime -->
+  <audio id="chime" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_5b7b7a71c6.mp3?filename=notification-soft-143884.mp3"></audio>
 </div>
+
 
 <script src="script.js"></script>
 </body>

@@ -202,3 +202,95 @@ body {
   text-align: center;
   box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
+/* ---------- NO PAGE ---------- */
+.no-page {
+  height: 100%;
+  background: #fff5f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  padding: 20px;
+}
+
+.meme-wrapper {
+  width: 320px;
+  max-width: 90%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+}
+
+/* Back button */
+.btn.back {
+  background: #ff4d88;
+  color: white;
+  border-radius: 30px;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* ---------- FINAL TEXT REVEAL ---------- */
+.final-text {
+  text-align: center;
+  z-index: 2;
+}
+
+.final-text .line {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: reveal 0.8s ease forwards;
+  font-size: 1.2rem;
+  color: #e63973;
+  margin: 12px 0;
+}
+
+.final-text .line:nth-child(1) { animation-delay: 0.5s; }
+.final-text .line:nth-child(2) { animation-delay: 1.6s; }
+.final-text .line:nth-child(3) { animation-delay: 2.8s; }
+.final-text .line:nth-child(4) { animation-delay: 4.2s; }
+
+.final-text .highlight {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- FLOATING HEARTS ---------- */
+.hearts {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.heart {
+  position: absolute;
+  bottom: -20px;
+  font-size: 18px;
+  color: rgba(255, 77, 136, 0.4);
+  animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  10% { opacity: 1; }
+  to {
+    transform: translateY(-120vh) scale(1.4);
+    opacity: 0;
+  }
+}
+
+
